@@ -1,0 +1,45 @@
+# C++ Build
+cloud-drive/build/
+cloud-drive/cmake-build-*/
+cloud-drive/out/
+
+# IDE - C++ / CLion / VS
+cloud-drive/.idea/
+cloud-drive/.vscode/
+cloud-drive/*.user
+cloud-drive/*.suo
+cloud-drive/CMakeUserPresets.json
+
+# Compiled Object files
+cloud-drive/*.o
+cloud-drive/*.obj
+cloud-drive/*.exe
+cloud-drive/*.out
+cloud-drive/*.app
+
+# Frontend - Node
+cloud-drive-frontend/node_modules/
+cloud-drive-frontend/dist/
+cloud-drive-frontend/dist-ssr/
+cloud-drive-frontend/*.local
+
+# Frontend - Logs
+cloud-drive-frontend/logs/
+cloud-drive-frontend/*.log
+cloud-drive-frontend/npm-debug.log*
+cloud-drive-frontend/yarn-debug.log*
+cloud-drive-frontend/yarn-error.log*
+cloud-drive-frontend/lerna-debug.log*
+
+# Frontend - Editor
+cloud-drive-frontend/.vscode/*
+!cloud-drive-frontend/.vscode/extensions.json
+cloud-drive-frontend/.idea/
+cloud-drive-frontend/*.suo
+cloud-drive-frontend/*.ntvs*
+cloud-drive-frontend/*.njsproj
+cloud-drive-frontend/*.sln
+cloud-drive-frontend/*.sw?
+
+# macOS
+.DS_Store

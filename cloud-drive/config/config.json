@@ -1,0 +1,57 @@
+{
+    "listeners": [
+        {
+            "address": "0.0.0.0",
+            "port": 8080,
+            "https": false
+        }
+    ],
+    "app": {
+        "number_of_threads": 2,
+        "log_path": "/data/cloud-drive/logs",
+        "log_level": "DEBUG",
+        "run_as_daemon": false,
+        "client_max_body_size": "100M",
+        "client_max_memory_body_size": "10M"
+    },
+    "db_clients": [
+        {
+            "name": "cloud_drive",
+            "rdbms": "mysql",
+            "host": "127.0.0.1",
+            "port": 3306,
+            "user": "clouddrive",
+            "passwd": "CloudDrive2024",
+            "dbname": "cloud_drive",
+            "connection_number": 4,
+            "timeout": 5
+        }
+    ],
+    "plugins": [
+        {
+            "name": "CloudDrive::RedisPlugin",
+            "dependencies": [],
+            "config": {
+                "host": "127.0.0.1",
+                "port": 6379
+            }
+        }
+    ],
+    "custom_config": {
+        "storage": {
+            "path": "/data/cloud-drive/files",
+            "tmp_path": "/data/cloud-drive/tmp",
+            "max_file_size": 10737418240,
+            "default_storage_limit": 1073741824
+        },
+        "jwt": {
+            "secret": "CloudDrive-JWT-Secret-Key-2024",
+            "access_token_expire_seconds": 1800,
+            "refresh_token_expire_seconds": 604800
+        },
+        "redis": {
+            "host": "127.0.0.1",
+            "port": 6379
+        }
+    }
+}
